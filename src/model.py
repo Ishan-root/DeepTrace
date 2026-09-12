@@ -15,8 +15,8 @@ def get_model(num_classes=2, pretrained=True):
     model = models.resnet18(weights=weights)
 
     # ResNet18's final layer is called 'fc' (fully connected).
-    # It currently maps features -> 1000 classes. We replace it
-    # with a fresh layer mapping features -> 2 classes.
+    # It currently maps features to 1000 classes. We replace it
+    # with a fresh layer mapping features to our 2 classes.
     num_features = model.fc.in_features
     model.fc = nn.Linear(num_features, num_classes)
 

@@ -18,7 +18,7 @@ transform = transforms.Compose([
 ])
 
 
-def get_dataloaders(data_dir="data/raw", batch_size=32, num_workers=2):
+def get_dataloaders(data_dir="data/raw_sala_sorted", batch_size=32, num_workers=2):
     """
     Loads train and test datasets from data_dir/train and data_dir/test.
     Expects subfolders REAL/ and FAKE/ inside each.
